@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    
+    --color-1:#1D64F2;
+    --color-2:#011C40;
+    --color-3:#F2EED8;
+    --color-4:#F24822;
+
+    --color-hover:#1243A6;
+
+    --fuente-bree: "Bree Serif", serif;
+    --fuente-montserrat: "Montserrat", sans-serif; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-3);
+    box-sizing: border-box;
+}
+.header{
+    
+    flex-direction: row;
+    position: relative;
+    margin: 2%;
+}
+.titulo{
+    width: 25%;
+    left:5%;
+    position: relative;
+}
+.contenedor{
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    gap: 5%;
+}
+
+.entrada{
+    width: 60%;
+    position: relative;
+    top: 5%;
+}
+
+.texto_entrada{
+    left: 15%;
+    width:80%;
+    height: 50%;
+    background-color: var(--color-3);
+    color: var(--color-4);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuente-montserrat);
+    text-transform: lowercase;
+    white-space:initial;
+   
+    position: relative;
+    flex:1;
+    
+}
+
+.texto_entrada::placeholder{
+    color: var(--color-4);
+}
+    .texto_entrada:focus{ 
+        outline: none;
+
+    }
+
+
+.requisitos{
+    left: 10%;
+    width: 70%;
+    position: relative;
+    font-family: var(--fuente-bree);
+    font-size: 1.25rem;
+    color: var(--color-2);
+    margin: 2%;
+}
+
+.botones{
+    width: 90%;
+    left: 10%;
+    flex-direction: row;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.boton_encriptar{
+    border: none;
+    border-radius: 24px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--fuente-bree);
+    text-align:center;
+    color:var(--color-3);
+    background-color:var(--color-4) ;
+    width:50%;
+    height: 80px;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0,0.25);
+    cursor: pointer;
+}
+
+.boton_encriptar:hover{
+    background-color: var(--color-hover);
+    color: var(--color-3);
+}
+
+.boton_desencriptar{
+    border: none;
+    border-radius: 24px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--fuente-bree);
+    text-align:center;
+    color:var(--color-3);
+    background-color:var(--color-4) ;
+    width:50%;
+    height: 80px;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0,0.25);
+    cursor: pointer;
+}
+
+.boton_desencriptar:hover{
+    background-color: var(--color-hover);
+    color: var(--color-3);
+   
+}
+
+.salida{
+    width:30%;
+    height: 80%;
+    background-color: var(--color-4); 
+    border-radius: 24px;
+    flex-direction: column;  
+    position: relative;
+    overflow-y: auto;   
+    justify-content: flex-end;
+    display: flex;
+}
+
+
+
+.imagen{
+    width: 70%;
+    top: 15%;
+    left: 15%;
+    position: absolute;
+}
+.parrafo_uno{
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    font-family: var(--fuente-bree);
+    color: var(--color-3);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+}
+
+.parrafo_dos{
+    width:60%;
+    top: 60%;
+    left: 20%;
+    font-family: var(--fuente-montserrat);
+    color: var(--color-3);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;    
+}
+
+.texto_salida{ 
+    position: absolute;
+    width:90%;
+    left:5%;
+    top: 2%;
+    height: 75%;
+    font-family: var(--fuente-montserrat);
+    font-size: 2rem;
+    background-color:var(--color-4);
+    color: var(--color-3);
+    border: none;
+    display: none;
+    box-sizing: border-box;
+    flex: 1;
+
+}
+.texto_salida:focus{
+    outline: none;
+}
+
+.boton_copiar{
+    border: none;
+    border-radius: 24px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--fuente-bree);
+    text-align:center;
+    color:var(--color-4);
+    background-color:var(--color-3) ;
+    width:80%;
+    height: 80px;
+    left: 5%;
+    margin: 5%;
+    top: 74%;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0,0.25);
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    
+}
+
+.boton_copiar:hover{
+    background-color: var(--color-hover);
+    color: var(--color-3);
+}
+
+
+.footer{
+   
+    color: var(--color-2); 
+    text-align: center; 
+    font-family: var(--fuente-montserrat);
+    padding: 1rem; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+/* Responsive a 1200px hasta 768px */
+
+@media (max-width: 1100px) {
+
+    .contenedor {
+        width: 100%;
+        display:mflex;
+        flex-direction: column;
+        gap:3rem;
+    }
+    
+    .entrada {
+        width: 90%;
+        height: 60%;
+        left: 5%;
+        position: relative;
+        top: 5%;
+    }
+
+    .texto_entrada {
+        position: relative;
+        width: 100%;
+        height: 60%;
+        left: 1%; 
+    }
+
+    .requisitos {
+        left: 0%;
+        margin: 2%;
+        font-size: 1.25rem;
+    }
+
+    .botones {
+        position: relative;
+        width: 100%;
+        left: 0%;
+        gap: 2%;
+    }
+
+    .boton_encriptar {
+        position: relative;
+        width: 100%;
+    }
+
+    .boton_desencriptar {
+        position: relative;
+        width: 100%;
+    }
+
+    .salida {
+        width: 90%;
+        height: 20%;
+        left: 5%;
+        position: relative;
+        flex: 1;
+    }
+
+    .imagen {
+        display: none;
+    }
+
+    .parrafo_uno {
+        position: absolute;
+        top: 20%;
+    }
+
+    .parrafo_dos {
+        position: absolute;
+        top: 35%;
+    }
+
+    .texto_salida {
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: 95%;
+        height: 70%;
+        position: absolute;
+        left: 2.5%;
+    }
+
+    .boton_copiar {
+        margin: 1rem;
+        position: absolute;
+        top: 70%;
+        left: 8%;
+    }
+
+
+}
+
+/* Responsive a 1200px hasta 768px */
+
+@media (max-width:740px){
+
+    .contenedor{
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        gap: 1rem;
+    }
+    .entrada{
+        width: 90%;
+        height: 68%;
+        left: 5%;
+        top: 5%;
+        position: relative;
+    }
+
+    .texto_entrada{
+        position: relative;
+        width: 100%;
+        height: 50%;
+        left: 1%; 
+    }
+
+    .requisitos{
+        left: 0%;
+        margin: 2%;
+        font-size: 1rem;
+    }
+
+    .botones{
+        flex-direction: column;
+        position: relative;
+        gap: 2rem;
+    }
+
+
+    .salida{
+        height: 20%;
+       
+
+    }
+
+    .parrafo_uno{
+        position: absolute;
+        left:10% ;
+        width: 80%;
+        top: 20%;
+    }
+
+    .parrafo_dos{
+        position: absolute;
+        top: 40%;
+        
+    }
+
+
+   .imagen{
+    display: none;
+   }
+
+   .boton_copiar{
+    margin: 1rem;
+    position: absolute;
+    top: 65%;
+    left: 8%; 
+   }
+
+
+
+}

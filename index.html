@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptados</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header"> 
+        <img class="titulo" src="/assents/titulo.svg" alt="nombre de la pagina">
+    </header>
+    <div class="contenedor ">
+        <div class="entrada">
+            <textarea class="texto_entrada" name="textoEntrada" id="textoEntrada" placeholder="Ingrese el texto aqui..." ></textarea>
+            <p class="requisitos" id="requisitos">* solo minisculas, sin acentos ni caracteres especiales</p>
+            <div class="botones">
+                <button class="boton_encriptar" id="botonEncriptar" onclick="encriptarTexto()">Encriptar</button>
+                <button class="boton_desencriptar" id="botonDesencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+            </div>      
+        </div>
+        <div class="salida">
+            <img class="imagen" id="imagen" src="/assents/notext.svg" alt=" vector meditando">
+            <h3 class="parrafo_uno" id="parrafoUno">Ningun texto fue encontrado</h3>
+            <p class="parrafo_dos" id="parrafoDos"> Ingrese el texto que desees encriptar o desencriptar</p>
+            <textarea class="texto_salida" id="textoSalida" readonly></textarea>
+            <button class="boton_copiar" id="botonCopiar" onclick="copiarTexto()">Copiar</button>
+        </div>    
+    </div>
+    <footer class="footer">Desarrollado por Josue</footer>
+    <script src="/script.js"></script>
+    
+</body>
+</html>
